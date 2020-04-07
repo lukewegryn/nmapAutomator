@@ -506,15 +506,6 @@ if (( "$#" != 2 )); then
 	usage
 fi
 
-if [[ $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-	:
-else
-	echo -e "${RED}"
-	echo -e "${RED}Invalid IP!"
-	echo -e "${RED}"
-	usage
-fi
-
 if [[ "$2" =~ ^(Quick|Basic|UDP|Full|Vulns|Recon|All|quick|basic|udp|full|vulns|recon|all)$ ]]; then
 	if [[ ! -d $1 ]]; then
 	        mkdir "$1"
